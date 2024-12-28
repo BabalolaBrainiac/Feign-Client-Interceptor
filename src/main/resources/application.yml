@@ -1,0 +1,8 @@
+api:
+  jsonplaceholder:
+    url: https://jsonplaceholder.typicode.com
+  key: your-api-key-here
+
+logging:
+  level:
+    com.babalola.feignclientinterceptor: DEBUG

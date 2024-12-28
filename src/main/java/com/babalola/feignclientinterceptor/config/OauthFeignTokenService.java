@@ -16,8 +16,8 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import feign.codec.Encoder;
 import feign.form.spring.SpringFormEncoder;
 
-@FeignClient(name = "OauthFeignService", url = "url-to-fetch-auth-access-token", configuration = OauthFeignService.Configuration.class)
-public interface OauthFeignService {
+@FeignClient(name = "OauthFeignTokenService", url = "url-to-fetch-auth-access-token", configuration = OauthFeignTokenService.Configuration.class)
+public interface OauthFeignTokenService {
 
     @PostMapping(value = "/access-token", consumes = APPLICATION_FORM_URLENCODED_VALUE)
     String getToken(@RequestBody Map<String, ?> form, @RequestHeader("Authorization") String auth);
